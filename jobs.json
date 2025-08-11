@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "title": "Property Manager",
+    "location": "Downtown District",
+    "type": "Full-time",
+    "description": "Lead property operations for luxury residential complex. Experience with tenant relations and maintenance coordination required.",
+    "salary": "$65,000 - $75,000",
+    "requirements": [
+      "3+ years property management experience",
+      "Strong communication skills",
+      "Knowledge of property management software"
+    ],
+    "posted": "2024-01-15"
+  },
+  {
+    "id": 2,
+    "title": "Leasing Agent",
+    "location": "Midtown Area",
+    "type": "Part-time",
+    "description": "Conduct property tours, process applications, and assist with lease renewals. Weekend availability preferred.",
+    "salary": "$18 - $22/hour",
+    "requirements": ["Customer service experience", "Weekend availability", "Real estate license preferred"],
+    "posted": "2024-01-14"
+  },
+  {
+    "id": 3,
+    "title": "Concierge",
+    "location": "Luxury High-rise",
+    "type": "Full-time",
+    "description": "Provide exceptional front desk service in upscale residential building. Previous hospitality experience a plus.",
+    "salary": "$45,000 - $50,000",
+    "requirements": ["Hospitality experience preferred", "Professional appearance", "Multilingual skills a plus"],
+    "posted": "2024-01-13"
+  },
+  {
+    "id": 4,
+    "title": "Security Officer",
+    "location": "Commercial Complex",
+    "type": "Full-time",
+    "description": "Certified security professional needed for commercial property. Fire watch certification required.",
+    "salary": "$40,000 - $45,000",
+    "requirements": ["Security certification", "Fire watch certification", "Clean background check"],
+    "posted": "2024-01-12"
+  },
+  {
+    "id": 5,
+    "title": "Maintenance Assistant",
+    "location": "Multiple Locations",
+    "type": "Contract",
+    "description": "Support maintenance team with basic repairs and property upkeep. Tools and training provided.",
+    "salary": "$20 - $25/hour",
+    "requirements": ["Basic maintenance skills", "Reliable transportation", "Flexible schedule"],
+    "posted": "2024-01-11"
+  },
+  {
+    "id": 6,
+    "title": "Assistant Property Manager",
+    "location": "Suburban Community",
+    "type": "Full-time",
+    "description": "Support property manager with daily operations, tenant communications, and administrative tasks.",
+    "salary": "$50,000 - $55,000",
+    "requirements": ["Administrative experience", "Property management knowledge", "Strong organizational skills"],
+    "posted": "2024-01-10"
+  }
+]
