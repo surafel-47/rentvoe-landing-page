@@ -18,40 +18,44 @@
     "title": "Leasing Agent",
     "location": "Midtown Area",
     "type": "Part-time",
-    "description": "Conduct property tours, process applications, and assist with lease renewals. Weekend availability preferred.",
+    "description": "Assist prospective tenants with apartment viewings and lease applications. Weekend availability required.",
     "salary": "$18 - $22/hour",
-    "requirements": ["Customer service experience", "Weekend availability", "Real estate license preferred"],
-    "posted": "2024-01-14"
-  },
-  {
-    "id": 3,
-    "title": "Concierge",
-    "location": "Luxury High-rise",
-    "type": "Full-time",
-    "description": "Provide exceptional front desk service in upscale residential building. Previous hospitality experience a plus.",
-    "salary": "$45,000 - $50,000",
-    "requirements": ["Hospitality experience preferred", "Professional appearance", "Multilingual skills a plus"],
-    "posted": "2024-01-13"
-  },
-  {
-    "id": 4,
-    "title": "Security Officer",
-    "location": "Commercial Complex",
-    "type": "Full-time",
-    "description": "Certified security professional needed for commercial property. Fire watch certification required.",
-    "salary": "$40,000 - $45,000",
-    "requirements": ["Security certification", "Fire watch certification", "Clean background check"],
+    "requirements": ["Customer service experience", "Real estate license preferred", "Weekend availability"],
     "posted": "2024-01-12"
   },
   {
+    "id": 3,
+    "title": "Maintenance Technician",
+    "location": "Various Locations",
+    "type": "Full-time",
+    "description": "Perform routine maintenance and repairs across multiple residential properties. HVAC experience a plus.",
+    "salary": "$45,000 - $55,000",
+    "requirements": [
+      "2+ years maintenance experience",
+      "Basic electrical and plumbing skills",
+      "Valid driver's license"
+    ],
+    "posted": "2024-01-10"
+  },
+  {
+    "id": 4,
+    "title": "Concierge",
+    "location": "Luxury Tower",
+    "type": "Full-time",
+    "description": "Provide exceptional customer service to residents and guests in upscale residential building.",
+    "salary": "$35,000 - $42,000",
+    "requirements": ["Customer service experience", "Professional appearance", "Multilingual skills preferred"],
+    "posted": "2024-01-08"
+  },
+  {
     "id": 5,
-    "title": "Maintenance Assistant",
-    "location": "Multiple Locations",
-    "type": "Contract",
-    "description": "Support maintenance team with basic repairs and property upkeep. Tools and training provided.",
-    "salary": "$20 - $25/hour",
-    "requirements": ["Basic maintenance skills", "Reliable transportation", "Flexible schedule"],
-    "posted": "2024-01-11"
+    "title": "Security Officer",
+    "location": "Commercial Complex",
+    "type": "Part-time",
+    "description": "Monitor property security systems and conduct regular patrols. Night shift availability required.",
+    "salary": "$16 - $20/hour",
+    "requirements": ["Security license required", "Night shift availability", "Clean background check"],
+    "posted": "2024-01-05"
   },
   {
     "id": 6,
@@ -59,8 +63,12 @@
     "location": "Suburban Community",
     "type": "Full-time",
     "description": "Support property manager with daily operations, tenant communications, and administrative tasks.",
-    "salary": "$50,000 - $55,000",
-    "requirements": ["Administrative experience", "Property management knowledge", "Strong organizational skills"],
-    "posted": "2024-01-10"
+    "salary": "$40,000 - $48,000",
+    "requirements": [
+      "1+ years property management experience",
+      "Strong organizational skills",
+      "Proficiency in property management software"
+    ],
+    "posted": "2024-01-03"
   }
 ]
