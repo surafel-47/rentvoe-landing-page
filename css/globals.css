@@ -4,6 +4,13 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  --primary-color: #271033;
+  --primary-light: #3d1a4f;
+  --accent-color: #6c63ff;
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --info-color: #3b82f6;
+
   /* Updated color tokens to match Rentvoe brand with #271033 primary */
   --background: oklch(1 0 0); /* White background */
   --foreground: oklch(0.2 0.05 300); /* #271033 converted to oklch */
@@ -185,3 +192,80 @@
 .card-gradient {
   background: linear-gradient(135deg, rgba(39, 16, 51, 0.05) 0%, rgba(108, 99, 255, 0.05) 100%);
 }
+
+
+
+
+
+
+
+  body {
+      font-family: 'Inter', sans-serif;
+  }
+  
+  .font-heading {
+      font-family: 'Playfair Display', serif;
+  }
+  
+  .bg-primary { background-color: var(--primary-color); }
+  .bg-primary-light { background-color: var(--primary-light); }
+  .bg-accent { background-color: var(--accent-color); }
+  .bg-success { background-color: var(--success-color); }
+  .bg-warning { background-color: var(--warning-color); }
+  .bg-info { background-color: var(--info-color); }
+  
+  .text-primary { color: var(--primary-color); }
+  .text-accent { color: var(--accent-color); }
+  .text-success { color: var(--success-color); }
+  .text-warning { color: var(--warning-color); }
+  .text-info { color: var(--info-color); }
+  
+  .service-card {
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+  }
+  
+  .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(39, 16, 51, 0.15);
+  }
+  
+  .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+      transition: left 0.5s;
+  }
+  
+  .service-card:hover::before {
+      left: 100%;
+  }
+  
+  .gradient-overlay {
+      background: linear-gradient(135deg, rgba(39, 16, 51, 0.9) 0%, rgba(39, 16, 51, 0.7) 100%);
+  }
+  
+  .hero-bg {
+      background-size: cover;
+      background-position: center;
+      transition: background-image 1s ease-in-out;
+  }
+  
+  html {
+      scroll-behavior: smooth;
+  }
+  
+  .navbar-hidden {
+      transform: translateY(-100%);
+      transition: transform 0.3s ease-in-out;
+  }
+  
+  .navbar-visible {
+      transform: translateY(0);
+      transition: transform 0.3s ease-in-out;
+  }
