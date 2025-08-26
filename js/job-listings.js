@@ -24,4 +24,4 @@ const jobListings = [
       "Provide exceptional front desk service in upscale residential building. Previous hospitality experience a plus.",
     salary: "$45,000 - $50,000",
   },
-  {
+]
