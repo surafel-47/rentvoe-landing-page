@@ -81,48 +81,435 @@
             </div>
         </div>
     </nav>
-    
+   
     <!-- Hero Section -->
-    <div class="rounded-xl shadow-2xl">
-        <section id="home" class="relative min-h-screen flex items-center hero-bg" style="background-image: url('/assets/1.jpg');">
-            <div class="absolute inset-0 gradient-overlay"></div>
-            
-            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <!-- Left Content -->
-                    <div class="text-white" data-aos="fade-right">
-                        <h1 class="font-heading font-bold text-5xl lg:text-6xl mb-6 leading-tight">
-                            Complete Property Management
-                            <span class="text-accent">Solutions</span>
-                        </h1>
-                        <p class="text-xl mb-8 text-gray-200 leading-relaxed">
-                            From professional staffing to vendor coordination and full property management services. 
-                            We're your comprehensive partner in real estate operations and success.
-                        </p>
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <a href="#services" class="bg-accent text-white px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all text-center">
-                                <i class="fas fa-rocket mr-2"></i>
-                                Explore Services
-                            </a>
-                            <a href="#contact" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-black transition-all text-center">
-                                <i class="fas fa-phone mr-2"></i>
-                                Get Started
-                            </a>
-                        </div>
+    <section id="home" class="relative min-h-screen flex items-center hero-bg" style="background-image: url('/assets/1.jpg');">
+        <div class="absolute inset-0 gradient-overlay"></div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="text-white" data-aos="fade-right">
+                    <h1 id="hero-title" class="font-heading font-bold text-5xl lg:text-6xl mb-6 leading-tight">
+                        Build Your Career in
+                        <span class="text-accent">Property Management</span>
+                    </h1>
+                    <p id="hero-description" class="text-xl mb-8 text-gray-200 leading-relaxed">
+                        Join our dynamic team and grow your career in the thriving property management industry. 
+                        We offer competitive benefits, professional development, and opportunities to make a real impact.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="careers.html" class="bg-accent text-white px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all text-center">
+                            <i class="fas fa-briefcase mr-2"></i>
+                            Apply Now
+                        </a>
+                        <a href="#why_work_with_us" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#271033] transition-all text-center">
+                            <i class="fas fa-users mr-2"></i>
+                            Why Join Us
+                        </a>
                     </div>
-                    
-                    <!-- Right Content - Building Image -->
-                    <div class="hidden lg:block" data-aos="fade-left">
-                        <div class="relative">
-                            <img src="/assets/1.jpg" 
-                                alt="Modern Property Management Building" 
-                                class="rounded-2xl shadow-2xl">
-                        </div>
+                </div>
+                
+                <!-- Right Content - Career Stats -->
+                <div class="hidden lg:block" data-aos="fade-left">
+                    <div class="relative" >
+                        <img src="/assets/1.jpg" 
+                            id="right_side_image"
+                            alt="Modern Property Management Building" 
+                            class="rounded-2xl shadow-2xl">
                     </div>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
+
+
+    <!-- Job Categories Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-heading font-bold text-4xl text-primary mb-6">
+                    Explore Career Opportunities
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Discover exciting career paths in property management. From entry-level positions to executive roles, 
+                    we have opportunities that match your skills and ambitions.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Property Management -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="aspect-[4/3] bg-cover bg-center" style="background-image: url('/assets/leasing.png');">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/70 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <div class="flex items-center justify-center w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl mb-4 mx-auto">
+                            <i class="fas fa-building text-white text-xl"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-center mb-4">PROPERTY MANAGEMENT</h3>
+                        <a href="careers.html" class="block w-full text-center py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-[#271033] hover:text-primary transition-all">
+                            VIEW POSITIONS
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Leasing & Sales -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="aspect-[4/3] bg-cover bg-center" style="background-image: url('/assets/sales.png');">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-accent via-accent/70 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <div class="flex items-center justify-center w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl mb-4 mx-auto">
+                            <i class="fas fa-handshake text-white text-xl"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-center mb-4">LEASING & SALES</h3>
+                        <a href="careers.html" class="block w-full text-center py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-[#271033] hover:text-accent transition-all">
+                            VIEW POSITIONS
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Maintenance & Engineering -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                    <div class="aspect-[4/3] bg-cover bg-center" style="background-image: url('/assets/operations.png');">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-success via-success/70 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <div class="flex items-center justify-center w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl mb-4 mx-auto">
+                            <i class="fas fa-tools text-white text-xl"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-center mb-4">MAINTENANCE & ENGINEERING</h3>
+                        <a href="careers.html" class="block w-full text-center py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-[#271033] hover:text-success transition-all">
+                            VIEW POSITIONS
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Security & Concierge -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="400">
+                    <div class="aspect-[4/3] bg-cover bg-center" style="background-image: url('/assets/operations.png');">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-warning via-warning/70 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <div class="flex items-center justify-center w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl mb-4 mx-auto">
+                            <i class="fas fa-shield-alt text-white text-xl"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-center mb-4">SECURITY & CONCIERGE</h3>
+                        <a href="careers.html" class="block w-full text-center py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-[#271033] hover:text-warning transition-all">
+                            VIEW POSITIONS
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="500">
+                <p class="text-lg text-gray-600 mb-6">
+                    Property management staffing isn't just what we do... it's all we do!
+                </p>
+                <p class="text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                    We provide our clients with the best workers for their apartment communities and our associates with the 
+                    tools to succeed in the property management industry. Rentvoe is currently serving nationwide locations.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Emps Choose Rentvoe -->
+    <section class="py-20 " id="why_work_with_us">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-heading font-bold text-4xl text-primary mb-6">
+                    Why Work at Rentvoe
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Join a company that values your growth, offers competitive benefits, and provides meaningful work
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-graduation-cap text-accent text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-semibold text-xl text-primary mb-3">Career Development</h3>
+                    <p class="text-gray-600">Continuous learning opportunities, training programs, and clear advancement paths</p>
+                </div>
+                
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-success/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-heart text-success text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-semibold text-xl text-primary mb-3">Great Benefits</h3>
+                    <p class="text-gray-600">Comprehensive health insurance, retirement plans, and competitive compensation packages</p>
+                </div>
+                
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-warning/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-balance-scale text-warning text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-semibold text-xl text-primary mb-3">Work-Life Balance</h3>
+                    <p class="text-gray-600">Flexible schedules, remote work options, and generous paid time off policies</p>
+                </div>
+                
+                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-16 h-16 bg-info/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-users text-info text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-semibold text-xl text-primary mb-3">Team Culture</h3>
+                    <p class="text-gray-600">Collaborative environment with supportive colleagues and inclusive workplace values</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+     <!-- Call to Action -->
+    <section class="py-20 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center" data-aos="fade-up">
+                <h2 class="font-heading font-bold text-4xl mb-6">Ready to Start Your Career Journey?</h2>
+                <p class="text-xl mb-8 text-gray-200 max-w-2xl mx-auto">
+                    Explore our open positions and discover how you can grow your career 
+                    in the dynamic property management industry with Rentvoe.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="careers.html" class="bg-accent text-white px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all">
+                        <i class="fas fa-search mr-2"></i>
+                        Browse Open Positions
+                    </a>
+                    <a href="tel:+1234567890" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-black transition-all">
+                        <i class="fas fa-phone mr-2"></i>
+                        Call Now: (555) 123-4567
+                    </a>
+        
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-heading font-bold text-4xl text-primary mb-6">Get Started Today</h2>
+                <p class="text-xl text-gray-600">Tell us about your property management needs and we'll create a customized solution</p>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-xl p-8" data-aos="fade-up" data-aos-delay="200">
+                <form id="contact-form" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">Full Name</label>
+                            <input type="text" id="name" name="name" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent">
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="service-interest" class="block text-sm font-semibold text-gray-700 mb-2">Service Interest</label>
+                            <select id="service-interest" name="service-interest" required 
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent">
+                                <option value="">Select a service</option>
+                                <option value="staffing">Staffing Solutions</option>
+                                <option value="vendor">Vendor Solutions</option>
+                                <option value="management">Property Management</option>
+                                <option value="multiple">Multiple Services</option>
+                                <option value="consultation">General Consultation</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">Tell us about your needs</label>
+                        <textarea id="message" name="message" rows="5" required 
+                                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent"
+                                  placeholder="Describe your property, current challenges, and what you're looking for..."></textarea>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button type="submit" 
+                                class="bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-light transition-all">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Rentvoe -->
+    <section class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-heading font-bold text-4xl text-primary mb-6">
+                    Why Property Owners Choose Rentvoe
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We combine industry expertise with innovative solutions to deliver exceptional results
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16  rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-clock text-accent text-4xl"></i>
+                    </div>
+                    <h3 class="font-heading font-semibold text-xl text-primary mb-3">24/7 Support</h3>
+                    <p class="text-gray-600">Round-the-clock availability for urgent needs and emergency situations</p>
+                </div>
+                
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16  rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-success text-4xl"></i>
+                    </div>
+                    <h3 class="font-heading font-semibold text-xl text-primary mb-3">Fully Insured</h3>
+                    <p class="text-gray-600">Comprehensive insurance coverage and bonded professionals for your peace of mind</p>
+                </div>
+                
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16  rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-chart-line text-warning text-4xl"></i>
+                    </div>
+                    <h3 class="font-heading font-semibold text-xl text-primary mb-3">Proven Results</h3>
+                    <p class="text-gray-600">Track record of improving occupancy rates and reducing operational costs</p>
+                </div>
+                
+                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-16 h-16  rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-handshake text-info text-4xl"></i>
+                    </div>
+                    <h3 class="font-heading font-semibold text-xl text-primary mb-3">Trusted Partner</h3>
+                    <p class="text-gray-600">Long-term relationships built on reliability, transparency, and results</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section  -->
+    <section id="about" class="py-20 bg-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div data-aos="fade-right">
+                    <h2 class="font-heading font-bold text-4xl text-white mb-6">
+                        About Rentvoe
+                    </h2>
+                    <p class="text-lg text-gray-100 mb-6 leading-relaxed">
+                        Rentvoe is a dynamic property management company dedicated to revolutionizing 
+                        real estate operations through innovative solutions and exceptional service. 
+                        We specialize in three core areas that address the most critical needs in 
+                        property management today.
+                    </p>
+                    <p class="text-lg text-gray-100 mb-8 leading-relaxed">
+                        Our comprehensive approach combines professional staffing, vendor coordination, 
+                        and full-service property management to deliver seamless operations and 
+                        measurable results for property owners and managers.
+                    </p>
+                    
+                    <!-- Key Values -->
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-lightbulb text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-white mb-2">Innovation-Driven</h3>
+                                <p class="text-gray-400">We leverage cutting-edge technology and modern practices to streamline property operations and enhance efficiency.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-handshake text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-white mb-2">Partnership Focused</h3>
+                                <p class="text-gray-400">We build long-term relationships with our clients, understanding their unique needs and delivering customized solutions.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-award text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-white mb-2">Excellence Committed</h3>
+                                <p class="text-gray-400">Every service we provide is backed by rigorous quality standards and a commitment to exceeding expectations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Content - Our Team -->
+                <div data-aos="fade-left">
+                <h3 class="text-2xl font-bold text-primary mb-6">Meet Our Team</h3>
+                <div class="grid sm:grid-cols-2 gap-6">
+                    
+                    <!-- Team Member 1 -->
+                    <div class="bg-white rounded-xl p-4 shadow-lg text-center">
+                    <img src="/team1.jpg" alt="Team Member 1" 
+                        class="w-24 h-24 mx-auto rounded-full object-cover mb-4 border-4 border-accent/50">
+                    <h4 class="text-lg font-semibold text-primary">Mike</h4>
+                    <p class="text-sm text-primary-300">Founder & CEO</p>
+                    </div>
+
+                    <!-- Team Member 2 -->
+                    <div class="bg-white rounded-xl p-4 shadow-lg text-center">
+                    <img src="/team2.jpg" alt="Team Member 2" 
+                        class="w-24 h-24 mx-auto rounded-full object-cover mb-4 border-4 border-accent/50">
+                    <h4 class="text-lg font-semibold text-primary">Surafel.Z</h4>
+                    <p class="text-sm text-primary-300">Operations Director</p>
+                    </div>
+
+                    <!-- Team Member 3 -->
+                    <div class="bg-white rounded-xl p-4 shadow-lg text-center">
+                    <img src="/team3.jpg" alt="Team Member 3" 
+                        class="w-24 h-24 mx-auto rounded-full object-cover mb-4 border-4 border-accent/50">
+                    <h4 class="text-lg font-semibold text-primary">Emily Davis</h4>
+                    <p class="text-sm text-primary-300">Head of Client Relations</p>
+                    </div>
+
+                    <!-- Team Member 4 -->
+                    <div class="bg-white rounded-xl p-4 shadow-lg text-center">
+                    <img src="/team4.jpg" alt="Team Member 4" 
+                        class="w-24 h-24 mx-auto rounded-full object-cover mb-4 border-4 border-accent/50">
+                    <h4 class="text-lg font-semibold text-primary">James Carter</h4>
+                    <p class="text-sm text-primary-300">Lead Engineer</p>
+                    </div>
+                    
+                </div>
+                </div>
+
+            </div>
+            
+            <!-- Mission Statement -->
+            <div class="mt-16 text-center" data-aos="fade-up">
+                <div class="bg-gray-50 rounded-2xl p-8 max-w-4xl mx-auto">
+                    <h3 class="font-heading font-bold text-2xl text-primary mb-4">Our Mission</h3>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        To empower property owners and managers with comprehensive, reliable solutions 
+                        that optimize operations, reduce costs, and enhance the overall property experience. 
+                        We're committed to being the trusted partner that transforms property management 
+                        challenges into opportunities for growth and success.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Services Overview -->
     <section id="services" class="py-20 bg-gray-200">
@@ -288,251 +675,6 @@
         </div>
     </section>
 
-    <!-- Why Choose Rentvoe -->
-    <section class="py-20 bg-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="font-heading font-bold text-4xl text-primary mb-6">
-                    Why Property Owners Choose Rentvoe
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    We combine industry expertise with innovative solutions to deliver exceptional results
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-16 h-16  rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-clock text-accent text-4xl"></i>
-                    </div>
-                    <h3 class="font-heading font-semibold text-xl text-primary mb-3">24/7 Support</h3>
-                    <p class="text-gray-600">Round-the-clock availability for urgent needs and emergency situations</p>
-                </div>
-                
-                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-16 h-16  rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-shield-alt text-success text-4xl"></i>
-                    </div>
-                    <h3 class="font-heading font-semibold text-xl text-primary mb-3">Fully Insured</h3>
-                    <p class="text-gray-600">Comprehensive insurance coverage and bonded professionals for your peace of mind</p>
-                </div>
-                
-                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-16 h-16  rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-chart-line text-warning text-4xl"></i>
-                    </div>
-                    <h3 class="font-heading font-semibold text-xl text-primary mb-3">Proven Results</h3>
-                    <p class="text-gray-600">Track record of improving occupancy rates and reducing operational costs</p>
-                </div>
-                
-                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
-                    <div class="w-16 h-16  rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-handshake text-info text-4xl"></i>
-                    </div>
-                    <h3 class="font-heading font-semibold text-xl text-primary mb-3">Trusted Partner</h3>
-                    <p class="text-gray-600">Long-term relationships built on reliability, transparency, and results</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="py-20 bg-primary text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center" data-aos="fade-up">
-                <h2 class="font-heading font-bold text-4xl mb-6">Ready to Optimize Your Property Operations?</h2>
-                <p class="text-xl mb-8 text-gray-200 max-w-2xl mx-auto">
-                    Let's discuss how our comprehensive solutions can streamline your operations, 
-                    reduce costs, and improve your property's performance.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#contact" class="bg-accent text-white px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all">
-                        <i class="fas fa-calendar mr-2"></i>
-                        Schedule Consultation
-                    </a>
-                    <a href="tel:+1234567890" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-black transition-all">
-                        <i class="fas fa-phone mr-2"></i>
-                        Call Now: (555) 123-4567
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Form -->
-    <section id="contact" class="py-20 bg-gray-50">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="font-heading font-bold text-4xl text-primary mb-6">Get Started Today</h2>
-                <p class="text-xl text-gray-600">Tell us about your property management needs and we'll create a customized solution</p>
-            </div>
-            
-            <div class="bg-white rounded-2xl shadow-xl p-8" data-aos="fade-up" data-aos-delay="200">
-                <form id="contact-form" class="space-y-6">
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div>
-                            <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">Full Name</label>
-                            <input type="text" id="name" name="name" required 
-                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent">
-                        </div>
-                        <div>
-                            <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">Email Address</label>
-                            <input type="email" id="email" name="email" required 
-                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent">
-                        </div>
-                    </div>
-                    
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div>
-                            <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" 
-                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent">
-                        </div>
-                        <div>
-                            <label for="service-interest" class="block text-sm font-semibold text-gray-700 mb-2">Service Interest</label>
-                            <select id="service-interest" name="service-interest" required 
-                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent">
-                                <option value="">Select a service</option>
-                                <option value="staffing">Staffing Solutions</option>
-                                <option value="vendor">Vendor Solutions</option>
-                                <option value="management">Property Management</option>
-                                <option value="multiple">Multiple Services</option>
-                                <option value="consultation">General Consultation</option>
-                            </select>
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">Tell us about your needs</label>
-                        <textarea id="message" name="message" rows="5" required 
-                                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent"
-                                  placeholder="Describe your property, current challenges, and what you're looking for..."></textarea>
-                    </div>
-                    
-                    <div class="text-center">
-                        <button type="submit" 
-                                class="bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-light transition-all">
-                            <i class="fas fa-paper-plane mr-2"></i>
-                            Send Message
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Us Section  -->
-    <section id="about" class="py-20 bg-primary">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <!-- Left Content -->
-                <div data-aos="fade-right">
-                    <h2 class="font-heading font-bold text-4xl text-white mb-6">
-                        About Rentvoe
-                    </h2>
-                    <p class="text-lg text-gray-100 mb-6 leading-relaxed">
-                        Rentvoe is a dynamic property management company dedicated to revolutionizing 
-                        real estate operations through innovative solutions and exceptional service. 
-                        We specialize in three core areas that address the most critical needs in 
-                        property management today.
-                    </p>
-                    <p class="text-lg text-gray-100 mb-8 leading-relaxed">
-                        Our comprehensive approach combines professional staffing, vendor coordination, 
-                        and full-service property management to deliver seamless operations and 
-                        measurable results for property owners and managers.
-                    </p>
-                    
-                    <!-- Key Values -->
-                    <div class="space-y-4">
-                        <div class="flex items-start">
-                            <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                                <i class="fas fa-lightbulb text-primary text-xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-semibold text-white mb-2">Innovation-Driven</h3>
-                                <p class="text-gray-400">We leverage cutting-edge technology and modern practices to streamline property operations and enhance efficiency.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                                <i class="fas fa-handshake text-primary text-xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-semibold text-white mb-2">Partnership Focused</h3>
-                                <p class="text-gray-400">We build long-term relationships with our clients, understanding their unique needs and delivering customized solutions.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                                <i class="fas fa-award text-primary text-xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-semibold text-white mb-2">Excellence Committed</h3>
-                                <p class="text-gray-400">Every service we provide is backed by rigorous quality standards and a commitment to exceeding expectations.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Right Content - Our Team -->
-                <div data-aos="fade-left">
-                <h3 class="text-2xl font-bold text-primary mb-6">Meet Our Team</h3>
-                <div class="grid sm:grid-cols-2 gap-6">
-                    
-                    <!-- Team Member 1 -->
-                    <div class="bg-white rounded-xl p-4 shadow-lg text-center">
-                    <img src="/team1.jpg" alt="Team Member 1" 
-                        class="w-24 h-24 mx-auto rounded-full object-cover mb-4 border-4 border-accent/50">
-                    <h4 class="text-lg font-semibold text-primary">Mike</h4>
-                    <p class="text-sm text-primary-300">Founder & CEO</p>
-                    </div>
-
-                    <!-- Team Member 2 -->
-                    <div class="bg-white rounded-xl p-4 shadow-lg text-center">
-                    <img src="/team2.jpg" alt="Team Member 2" 
-                        class="w-24 h-24 mx-auto rounded-full object-cover mb-4 border-4 border-accent/50">
-                    <h4 class="text-lg font-semibold text-primary">Surafel.Z</h4>
-                    <p class="text-sm text-primary-300">Operations Director</p>
-                    </div>
-
-                    <!-- Team Member 3 -->
-                    <div class="bg-white rounded-xl p-4 shadow-lg text-center">
-                    <img src="/team3.jpg" alt="Team Member 3" 
-                        class="w-24 h-24 mx-auto rounded-full object-cover mb-4 border-4 border-accent/50">
-                    <h4 class="text-lg font-semibold text-primary">Emily Davis</h4>
-                    <p class="text-sm text-primary-300">Head of Client Relations</p>
-                    </div>
-
-                    <!-- Team Member 4 -->
-                    <div class="bg-white rounded-xl p-4 shadow-lg text-center">
-                    <img src="/team4.jpg" alt="Team Member 4" 
-                        class="w-24 h-24 mx-auto rounded-full object-cover mb-4 border-4 border-accent/50">
-                    <h4 class="text-lg font-semibold text-primary">James Carter</h4>
-                    <p class="text-sm text-primary-300">Lead Engineer</p>
-                    </div>
-                    
-                </div>
-                </div>
-
-            </div>
-            
-            <!-- Mission Statement -->
-            <div class="mt-16 text-center" data-aos="fade-up">
-                <div class="bg-gray-50 rounded-2xl p-8 max-w-4xl mx-auto">
-                    <h3 class="font-heading font-bold text-2xl text-primary mb-4">Our Mission</h3>
-                    <p class="text-lg text-gray-600 leading-relaxed">
-                        To empower property owners and managers with comprehensive, reliable solutions 
-                        that optimize operations, reduce costs, and enhance the overall property experience. 
-                        We're committed to being the trusted partner that transforms property management 
-                        challenges into opportunities for growth and success.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
 
     <!-- Footer -->
     <footer class=" bg-primary text-white py-16">
@@ -603,24 +745,49 @@
     
     <script>
 
-        // Hero background slideshow
-        const heroImages = [
-            '/assets/1.jpg',
-            '/assets/2.jpg',
-            '/assets/3.jpg',
-            '/assets/4.jpg'
+        // Hero background slideshow with dynamic text
+        const heroContent = [
+            {
+                
+                image: '/assets/2.jpg',
+                title: 'Build Your Career in<br><span class="text-accent">Property Management</span>',
+                description: 'Join our dynamic team and grow your career in the thriving property management industry. We offer competitive benefits, professional development, and opportunities to make a real impact.'
+            },
+            {
+                image:  '/assets/3.jpg',
+                title: 'Join a Team That<br><span class="text-accent">Values Growth</span>',
+                description: 'Work alongside industry experts who are committed to your success. We provide mentorship, training, and the resources you need to advance your career.'
+            },
+            {
+                image: '/assets/4.jpg',
+                title: 'Where Talent<br><span class="text-accent">Meets Opportunity</span>',
+                description: 'Discover a workplace that celebrates diversity, encourages innovation, and rewards excellence. Your next career milestone starts here.'
+            },
+            {
+                image: '/assets/1.jpg',
+                title: 'Unlock Your<br><span class="text-accent">Full Potential</span>',
+                description: 'Take advantage of our comprehensive training programs, career development initiatives, and leadership opportunities designed to help you thrive.'
+            }
         ];
         
-        let currentImageIndex = 0;
+        let currentContentIndex = 0;
         const heroSection = document.querySelector('.hero-bg');
+        const heroTitle = document.getElementById('hero-title');
+        const right_side_image = document.getElementById('right_side_image');
+
+        const heroDescription = document.getElementById('hero-description');
         
-        function changeHeroBackground() {
-            currentImageIndex = (currentImageIndex + 1) % heroImages.length;
-            heroSection.style.backgroundImage = `url('${heroImages[currentImageIndex]}')`;
+        function changeHeroContent() {
+            currentContentIndex = (currentContentIndex + 1) % heroContent.length;
+            const content = heroContent[currentContentIndex];
+            
+            heroSection.style.backgroundImage = `url('${content.image}')`;
+            heroTitle.innerHTML = content.title;
+            right_side_image.src = content.image;
+            heroDescription.textContent = content.description;
         }
         
-        setInterval(changeHeroBackground, 6000);
-
+        setInterval(changeHeroContent, 6000);
     </script>
 
 </html>
