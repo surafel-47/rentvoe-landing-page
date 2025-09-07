@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Property Management - Rentvoe Complete Solutions</title>
-    <meta name="description" content="Full-service property management solutions. Daily operations, tenant relations, financial management, and maintenance oversight for optimal property performance.">
-    
+    <meta name="description"
+        content="Full-service property management solutions. Daily operations, tenant relations, financial management, and maintenance oversight for optimal property performance.">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="/favicon.ico">
-    
+
     <link rel="stylesheet" href="/css/globals.css">
 </head>
+
 <body class="bg-white text-gray-900">
     <!-- Navigation -->
-     <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-[#271033]/95 backdrop-blur-sm shadow-sm navbar-visible">
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-[#271033]/95 backdrop-blur-sm shadow-sm navbar-visible">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
@@ -34,31 +39,38 @@
                         <img src="/assets/logo.png" alt="Rentvoe Logo" class="h-20 w-auto mr-2">
                     </a>
                 </div>
-                
+
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="/index.html#home" class="text-white hover:text-accent transition-colors">Home</a>
                     <div class="relative group">
-                        <a href="/index.html#services" class="text-white hover:text-accent transition-colors flex items-center">
+                        <a href="/index.html#services"
+                            class="text-white hover:text-accent transition-colors flex items-center">
                             Services <i class="fas fa-chevron-down ml-1 text-xs"></i>
                         </a>
-                        <div class="absolute top-full left-0 mt-2 w-56 bg-[#271033] rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                            <a href="/staffing.html" class="block px-4 py-3 text-white hover:bg-gray-700 hover:text-accent transition-colors">
+                        <div
+                            class="absolute top-full left-0 mt-2 w-56 bg-[#271033] rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                            <a href="/staffing.html"
+                                class="block px-4 py-3 text-white hover:bg-gray-700 hover:text-accent transition-colors">
                                 <i class="fas fa-users mr-2 text-accent"></i>Staffing Solutions
                             </a>
-                            <a href="/vendor-solutions.html" class="block px-4 py-3 text-white hover:bg-gray-700 hover:text-accent transition-colors">
+                            <a href="/vendor-solutions.html"
+                                class="block px-4 py-3 text-white hover:bg-gray-700 hover:text-accent transition-colors">
                                 <i class="fas fa-handshake mr-2 text-success"></i>Vendor Solutions
                             </a>
-                            <a href="/property-management.html" class="block px-4 py-3 text-white hover:bg-gray-700 hover:text-accent transition-colors">
+                            <a href="/property-management.html"
+                                class="block px-4 py-3 text-white hover:bg-gray-700 hover:text-accent transition-colors">
                                 <i class="fas fa-building mr-2 text-warning"></i>Property Management
                             </a>
                         </div>
                     </div>
                     <a href="/careers.html" class="text-white hover:text-accent transition-colors">Careers</a>
                     <a href="/index.html#about" class="text-white hover:text-accent transition-colors">About</a>
-                    <a href="/index.html#contact" class="bg-white text-[#271033] px-6 py-2 rounded-lg hover:bg-accent/80 transition-all">Contact Us</a>
+                    <a href="/index.html#contact"
+                        class="bg-white text-[#271033] px-6 py-2 rounded-lg hover:bg-accent/80 transition-all">Contact
+                        Us</a>
                 </div>
-                
+
                 <!-- Mobile menu button -->
                 <div class="md:hidden">
                     <button id="mobile-menu-btn" class="text-white hover:text-accent">
@@ -67,22 +79,25 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Mobile Navigation -->
         <div id="mobile-menu" class="hidden md:hidden bg-[#271033] border-t border-gray-700">
             <div class="px-4 py-2 space-y-2">
                 <a href="/index.html#home" class="block py-2 text-white hover:text-accent">Home</a>
                 <a href="/index.html#services" class="block py-2 text-white hover:text-accent">Services</a>
-                <a href="/staffing.html" class="block py-2 pl-4 text-gray-300 hover:text-accent"> <i class="fas fa-users mr-2 text-white"></i> Staffing Solutions</a>
-                <a href="/vendor-solutions.html" class="block py-2 pl-4 text-gray-300 hover:text-accent">  <i class="fas fa-handshake mr-2 text-white"></i> Vendor Solutions</a>
-                <a href="/property-management.html" class="block py-2 pl-4 text-gray-300 hover:text-accent">  <i class="fas fa-building mr-2 text-white"></i> Property Management</a>
+                <a href="/staffing.html" class="block py-2 pl-4 text-gray-300 hover:text-accent"> <i
+                        class="fas fa-users mr-2 text-white"></i> Staffing Solutions</a>
+                <a href="/vendor-solutions.html" class="block py-2 pl-4 text-gray-300 hover:text-accent"> <i
+                        class="fas fa-handshake mr-2 text-white"></i> Vendor Solutions</a>
+                <a href="/property-management.html" class="block py-2 pl-4 text-gray-300 hover:text-accent"> <i
+                        class="fas fa-building mr-2 text-white"></i> Property Management</a>
                 <a href="/index.html#about" class="block py-2 text-white hover:text-accent">About</a>
-<a href="/careers.html#about" class="block py-2 text-white hover:text-accent">Careers</a>
+                <a href="/careers.html#about" class="block py-2 text-white hover:text-accent">Careers</a>
                 <a href="/index.html#contact" class="block py-2 text-white font-semibold">Contact Us</a>
             </div>
         </div>
     </nav>
-    
+
 
     <!-- Hero Section -->
     <section class="pt-24 pb-16 bg-gradient-to-br from-warning/10 to-primary/10">
@@ -92,15 +107,17 @@
                     Full-Service Property Management
                 </h1>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8 leading-relaxed">
-                    Complete operational oversight and strategic management for optimal property performance. 
+                    Complete operational oversight and strategic management for optimal property performance.
                     From daily operations to long-term asset optimization.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#get-quote" class="bg-warning text-white px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all">
+                    <a href="#get-quote"
+                        class="bg-warning text-white px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all">
                         <i class="fas fa-calculator mr-2"></i>
                         Get Management Quote
                     </a>
-                    <a href="#services-overview" class="bg-info text-white px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all">
+                    <a href="#services-overview"
+                        class="bg-info text-white px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all">
                         <i class="fas fa-list mr-2"></i>
                         View Services
                     </a>
@@ -120,46 +137,50 @@
                     End-to-end property management solutions designed to maximize your investment returns
                 </p>
             </div>
-            
+
             <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
                 <div data-aos="fade-right">
-                    <img src="/placeholder.svg?height=600&width=800" 
-                         alt="Property management professional at work" 
-                         class="rounded-2xl shadow-lg">
+                    <img src="/placeholder.svg?height=600&width=800" alt="Property management professional at work"
+                        class="rounded-2xl shadow-lg">
                 </div>
-                
+
                 <div data-aos="fade-left">
-                    <h3 class="font-heading font-bold text-3xl text-primary mb-6">Why Choose Professional Management?</h3>
+                    <h3 class="font-heading font-bold text-3xl text-primary mb-6">Why Choose Professional Management?
+                    </h3>
                     <div class="space-y-4">
                         <div class="flex items-start">
                             <i class="fas fa-chart-line text-success text-xl mt-1 mr-4"></i>
                             <div>
                                 <h4 class="font-semibold text-lg text-primary mb-1">Maximize Revenue</h4>
-                                <p class="text-gray-600">Optimize rental rates, reduce vacancy periods, and implement revenue-enhancing strategies.</p>
+                                <p class="text-gray-600">Optimize rental rates, reduce vacancy periods, and implement
+                                    revenue-enhancing strategies.</p>
                             </div>
                         </div>
-                        
+
                         <div class="flex items-start">
                             <i class="fas fa-shield-alt text-info text-xl mt-1 mr-4"></i>
                             <div>
                                 <h4 class="font-semibold text-lg text-primary mb-1">Risk Management</h4>
-                                <p class="text-gray-600">Legal compliance, proper insurance coverage, and professional tenant screening processes.</p>
+                                <p class="text-gray-600">Legal compliance, proper insurance coverage, and professional
+                                    tenant screening processes.</p>
                             </div>
                         </div>
-                        
+
                         <div class="flex items-start">
                             <i class="fas fa-clock text-warning text-xl mt-1 mr-4"></i>
                             <div>
                                 <h4 class="font-semibold text-lg text-primary mb-1">Time Savings</h4>
-                                <p class="text-gray-600">Focus on your core business while we handle day-to-day operations and tenant relations.</p>
+                                <p class="text-gray-600">Focus on your core business while we handle day-to-day
+                                    operations and tenant relations.</p>
                             </div>
                         </div>
-                        
+
                         <div class="flex items-start">
                             <i class="fas fa-tools text-accent text-xl mt-1 mr-4"></i>
                             <div>
                                 <h4 class="font-semibold text-lg text-primary mb-1">Professional Maintenance</h4>
-                                <p class="text-gray-600">Preventive maintenance programs and emergency response to protect your investment.</p>
+                                <p class="text-gray-600">Preventive maintenance programs and emergency response to
+                                    protect your investment.</p>
                             </div>
                         </div>
                     </div>
@@ -179,10 +200,11 @@
                     Complete property oversight across all operational areas
                 </p>
             </div>
-            
+
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Daily Operations -->
-                <div class="service-card bg-white rounded-xl p-6 shadow-lg border border-gray-100" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-card bg-white rounded-xl p-6 shadow-lg border border-gray-100" data-aos="fade-up"
+                    data-aos-delay="100">
                     <div class="text-center mb-4">
                         <div class="w-16 h-16 bg-warning/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-cogs text-warning text-2xl"></i>
@@ -199,7 +221,8 @@
                 </div>
 
                 <!-- Tenant Relations -->
-                <div class="service-card bg-white rounded-xl p-6 shadow-lg border border-gray-100" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-card bg-white rounded-xl p-6 shadow-lg border border-gray-100" data-aos="fade-up"
+                    data-aos-delay="200">
                     <div class="text-center mb-4">
                         <div class="w-16 h-16 bg-info/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-users text-info text-2xl"></i>
@@ -216,7 +239,8 @@
                 </div>
 
                 <!-- Financial Management -->
-                <div class="service-card bg-white rounded-xl p-6 shadow-lg border border-gray-100" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-card bg-white rounded-xl p-6 shadow-lg border border-gray-100" data-aos="fade-up"
+                    data-aos-delay="300">
                     <div class="text-center mb-4">
                         <div class="w-16 h-16 bg-success/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-chart-pie text-success text-2xl"></i>
@@ -233,7 +257,8 @@
                 </div>
 
                 <!-- Maintenance Oversight -->
-                <div class="service-card bg-white rounded-xl p-6 shadow-lg border border-gray-100" data-aos="fade-up" data-aos-delay="400">
+                <div class="service-card bg-white rounded-xl p-6 shadow-lg border border-gray-100" data-aos="fade-up"
+                    data-aos-delay="400">
                     <div class="text-center mb-4">
                         <div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-tools text-accent text-2xl"></i>
@@ -250,7 +275,8 @@
                 </div>
 
                 <!-- Marketing & Leasing -->
-                <div class="service-card bg-white rounded-xl p-6 shadow-lg border border-gray-100" data-aos="fade-up" data-aos-delay="500">
+                <div class="service-card bg-white rounded-xl p-6 shadow-lg border border-gray-100" data-aos="fade-up"
+                    data-aos-delay="500">
                     <div class="text-center mb-4">
                         <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-bullhorn text-primary text-2xl"></i>
@@ -267,7 +293,8 @@
                 </div>
 
                 <!-- Legal & Compliance -->
-                <div class="service-card bg-white rounded-xl p-6 shadow-lg border border-gray-100" data-aos="fade-up" data-aos-delay="600">
+                <div class="service-card bg-white rounded-xl p-6 shadow-lg border border-gray-100" data-aos="fade-up"
+                    data-aos-delay="600">
                     <div class="text-center mb-4">
                         <div class="w-16 h-16 bg-info/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-gavel text-info text-2xl"></i>
@@ -297,7 +324,7 @@
                     Specialized management solutions for every type of real estate investment
                 </p>
             </div>
-            
+
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="text-center" data-aos="fade-up" data-aos-delay="100">
                     <div class="w-20 h-20 bg-warning/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -306,15 +333,16 @@
                     <h3 class="font-semibold text-lg text-primary mb-3">Multi-Family</h3>
                     <p class="text-gray-600 text-sm">Apartment complexes, condominiums, and residential communities</p>
                 </div>
-                
+
                 <div class="text-center" data-aos="fade-up" data-aos-delay="200">
                     <div class="w-20 h-20 bg-success/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-home text-success text-3xl"></i>
                     </div>
                     <h3 class="font-semibold text-lg text-primary mb-3">Single-Family</h3>
-                    <p class="text-gray-600 text-sm">Individual homes, townhouses, and single-family rental properties</p>
+                    <p class="text-gray-600 text-sm">Individual homes, townhouses, and single-family rental properties
+                    </p>
                 </div>
-                
+
                 <div class="text-center" data-aos="fade-up" data-aos-delay="300">
                     <div class="w-20 h-20 bg-info/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-briefcase text-info text-3xl"></i>
@@ -322,7 +350,7 @@
                     <h3 class="font-semibold text-lg text-primary mb-3">Commercial</h3>
                     <p class="text-gray-600 text-sm">Office buildings, retail spaces, and mixed-use developments</p>
                 </div>
-                
+
                 <div class="text-center" data-aos="fade-up" data-aos-delay="400">
                     <div class="w-20 h-20 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-warehouse text-accent text-3xl"></i>
@@ -345,30 +373,42 @@
                     Systematic approach to property management excellence
                 </p>
             </div>
-            
+
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="text-center" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-16 h-16 bg-warning text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">1</div>
+                    <div
+                        class="w-16 h-16 bg-warning text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                        1</div>
                     <h3 class="font-semibold text-lg text-primary mb-3">Property Assessment</h3>
-                    <p class="text-gray-600 text-sm">Comprehensive evaluation of property condition, market position, and optimization opportunities.</p>
+                    <p class="text-gray-600 text-sm">Comprehensive evaluation of property condition, market position,
+                        and optimization opportunities.</p>
                 </div>
-                
+
                 <div class="text-center" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-16 h-16 bg-success text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">2</div>
+                    <div
+                        class="w-16 h-16 bg-success text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                        2</div>
                     <h3 class="font-semibold text-lg text-primary mb-3">Strategic Planning</h3>
-                    <p class="text-gray-600 text-sm">Development of customized management strategy and operational procedures.</p>
+                    <p class="text-gray-600 text-sm">Development of customized management strategy and operational
+                        procedures.</p>
                 </div>
-                
+
                 <div class="text-center" data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-16 h-16 bg-info text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">3</div>
+                    <div
+                        class="w-16 h-16 bg-info text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                        3</div>
                     <h3 class="font-semibold text-lg text-primary mb-3">Implementation</h3>
-                    <p class="text-gray-600 text-sm">Execution of management plan with dedicated team assignment and system setup.</p>
+                    <p class="text-gray-600 text-sm">Execution of management plan with dedicated team assignment and
+                        system setup.</p>
                 </div>
-                
+
                 <div class="text-center" data-aos="fade-up" data-aos-delay="400">
-                    <div class="w-16 h-16 bg-accent text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">4</div>
+                    <div
+                        class="w-16 h-16 bg-accent text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                        4</div>
                     <h3 class="font-semibold text-lg text-primary mb-3">Ongoing Optimization</h3>
-                    <p class="text-gray-600 text-sm">Continuous monitoring, reporting, and strategy refinement for maximum performance.</p>
+                    <p class="text-gray-600 text-sm">Continuous monitoring, reporting, and strategy refinement for
+                        maximum performance.</p>
                 </div>
             </div>
         </div>
@@ -379,15 +419,17 @@
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12" data-aos="fade-up">
                 <h2 class="font-heading font-bold text-4xl mb-6">Get Your Management Quote</h2>
-                <p class="text-xl text-gray-200">Tell us about your property and we'll provide a customized management proposal</p>
+                <p class="text-xl text-gray-200">Tell us about your property and we'll provide a customized management
+                    proposal</p>
             </div>
-            
+
             <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8" data-aos="fade-up" data-aos-delay="200">
                 <form class="space-y-6">
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-sm font-semibold text-white mb-2">Property Type</label>
-                            <select class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white focus:outline-none focus:border-white">
+                            <select
+                                class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white focus:outline-none focus:border-white">
                                 <option value="">Select property type</option>
                                 <option value="multi-family">Multi-Family</option>
                                 <option value="single-family">Single-Family</option>
@@ -398,7 +440,8 @@
                         </div>
                         <div>
                             <label class="block text-sm font-semibold text-white mb-2">Number of Units</label>
-                            <select class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white focus:outline-none focus:border-white">
+                            <select
+                                class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white focus:outline-none focus:border-white">
                                 <option value="">Select unit count</option>
                                 <option value="1">1 Unit</option>
                                 <option value="2-5">2-5 Units</option>
@@ -409,15 +452,18 @@
                             </select>
                         </div>
                     </div>
-                    
+
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-sm font-semibold text-white mb-2">Property Address</label>
-                            <input type="text" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:border-white" placeholder="Enter property address">
+                            <input type="text"
+                                class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:border-white"
+                                placeholder="Enter property address">
                         </div>
                         <div>
                             <label class="block text-sm font-semibold text-white mb-2">Current Occupancy</label>
-                            <select class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white focus:outline-none focus:border-white">
+                            <select
+                                class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white focus:outline-none focus:border-white">
                                 <option value="">Select occupancy rate</option>
                                 <option value="0-25">0-25%</option>
                                 <option value="26-50">26-50%</option>
@@ -427,25 +473,32 @@
                             </select>
                         </div>
                     </div>
-                    
+
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-sm font-semibold text-white mb-2">Owner Name</label>
-                            <input type="text" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:border-white" placeholder="Your name">
+                            <input type="text"
+                                class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:border-white"
+                                placeholder="Your name">
                         </div>
                         <div>
                             <label class="block text-sm font-semibold text-white mb-2">Email</label>
-                            <input type="email" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:border-white" placeholder="your@email.com">
+                            <input type="email"
+                                class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:border-white"
+                                placeholder="your@email.com">
                         </div>
                     </div>
-                    
+
                     <div>
                         <label class="block text-sm font-semibold text-white mb-2">Management Goals & Challenges</label>
-                        <textarea rows="4" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:border-white" placeholder="Tell us about your property management goals, current challenges, and what you're looking for in a management partner..."></textarea>
+                        <textarea rows="4"
+                            class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:border-white"
+                            placeholder="Tell us about your property management goals, current challenges, and what you're looking for in a management partner..."></textarea>
                     </div>
-                    
+
                     <div class="text-center">
-                        <button type="submit" class="bg-warning text-white px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all">
+                        <button type="submit"
+                            class="bg-warning text-white px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all">
                             <i class="fas fa-calculator mr-2"></i>
                             Get Custom Quote
                         </button>
@@ -460,9 +513,9 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
-                 <div class="font-heading font-bold text-2xl mb-4">
-                    <img src="/assets/logo.png" alt="Rentvoe Logo" class="h-20 w-auto">
-                </div>
+                    <div class="font-heading font-bold text-2xl mb-4">
+                        <img src="/assets/logo.png" alt="Rentvoe Logo" class="h-20 w-auto">
+                    </div>
                     <p class="text-gray-300 mb-4">
                         Professional property management solutions for maximum investment returns.
                     </p>
@@ -478,7 +531,7 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <div>
                     <h3 class="font-heading font-semibold text-lg mb-4">Management Services</h3>
                     <ul class="space-y-2 text-gray-300">
@@ -488,7 +541,7 @@
                         <li><a href="#" class="hover:text-accent transition-colors">Maintenance Oversight</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h3 class="font-heading font-semibold text-lg mb-4">Property Types</h3>
                     <ul class="space-y-2 text-gray-300">
@@ -498,7 +551,7 @@
                         <li><a href="#" class="hover:text-accent transition-colors">Industrial</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h3 class="font-heading font-semibold text-lg mb-4">Contact</h3>
                     <div class="space-y-2 text-gray-300">
@@ -508,7 +561,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="border-t border-gray-600 mt-12 pt-8 text-center text-gray-300">
                 <p>&copy; 2025 Rentvoe. All rights reserved. | Professional Property Management Solutions</p>
             </div>
@@ -517,7 +570,8 @@
 
 </body>
 
-    <!-- Script s -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="js/script.js"></script>
+<!-- Script s -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/script.js"></script>
+
 </html>
