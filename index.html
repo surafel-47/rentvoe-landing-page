@@ -608,9 +608,9 @@
                                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent">
                         </div>
                         <div>
-                            <label for="service-interest" class="block text-sm font-semibold text-gray-700 mb-2">Service
+                            <label for="service_interest" class="block text-sm font-semibold text-gray-700 mb-2">Service
                                 Interest</label>
-                            <select id="service-interest" name="service-interest" required
+                            <select id="service_interest" name="service_interest" required
                                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent">
                                 <option value="">Select a service</option>
                                 <option value="staffing">Staffing Solutions</option>
@@ -639,6 +639,53 @@
                     </div>
                 </form>
             </div>
+            <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+            <script>
+                    // Init EmailJS
+                    (function () {
+                        emailjs.init("W1mtGRMCVOPWfCUbr"); //  PUBLIC key
+                    })();
+
+                    document.getElementById("contact-form").addEventListener("submit", function (e) {
+                        e.preventDefault();
+
+                        const serviceID = "service_ee3d1rs";  // your service ID
+                        const templateOwner = "contactUsTemplateOwner";   // make sure you created this template in EmailJS
+                        const templateClient = "send_to_client"; // and this one too
+
+                        // Collect form values
+                        const formData = {
+                        name: document.getElementById("name").value,
+                        email: document.getElementById("email").value,
+                        phone: document.getElementById("phone").value,
+                        service_interest: document.getElementById("service_interest").value,
+                        message: document.getElementById("message").value,
+                        };
+
+                        console.log("Form Data:", formData);
+                        // 1. Send email to YOU (site owner)
+                        emailjs.send(serviceID, templateOwner, formData)
+                        .then(() => {
+                            console.log("✅ Email sent to owner");
+                        })
+                        .catch((err) => {
+                            console.error("❌ Error sending to owner:", err);
+                        });
+
+                        // 2. Auto-reply to the client
+                        // emailjs.send(serviceID, templateClient, formData)
+                        //   .then(() => {
+                        //     console.log("✅ Auto-reply sent to client");
+                        //     alert("Message sent successfully! Check your inbox.");
+                        //     document.getElementById("contact-form").reset(); // clear form
+                        //   })
+                        //   .catch((err) => {
+                        //     console.error("❌ Error sending auto-reply:", err);
+                        //     alert("There was a problem sending your message. Please try again.");
+                        //   });
+                    });
+            </script>
+
         </div>
     </section>
 
@@ -809,8 +856,6 @@
             </div>
         </div>
     </section>
-
-
 
     <!-- Footer -->
     <footer class=" bg-primary text-white py-16">
