@@ -758,13 +758,10 @@
 <!-- Scripts -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="js/script.js"></script>
-
 <script>
-
     // Hero background slideshow with dynamic text
     const heroContent = [
         {
-
             image: '/assets/2.jpg',
             title: 'Build Your Career in<br><span class="text-accent">Property Management</span>',
             description: 'Join our dynamic team and grow your career in the thriving property management industry. We offer competitive benefits, professional development, and opportunities to make a real impact.'
@@ -789,21 +786,51 @@
     let currentContentIndex = 0;
     const heroSection = document.querySelector('.hero-bg');
     const heroTitle = document.getElementById('hero-title');
+    const heroDescription = document.getElementById('hero-description');
     const right_side_image = document.getElementById('right_side_image');
 
-    const heroDescription = document.getElementById('hero-description');
-
     function changeHeroContent() {
-        currentContentIndex = (currentContentIndex + 1) % heroContent.length;
-        const content = heroContent[currentContentIndex];
+        // Fade out
+        heroTitle.classList.remove("fade-in");
+        heroDescription.classList.remove("fade-in");
 
-        heroSection.style.backgroundImage = `url('${content.image}')`;
-        heroTitle.innerHTML = content.title;
-        right_side_image.src = content.image;
-        heroDescription.textContent = content.description;
+        heroTitle.classList.add("fade-out");
+        heroDescription.classList.add("fade-out");
+
+        // Wait for fade-out to finish before swapping content
+        setTimeout(() => {
+            currentContentIndex = (currentContentIndex + 1) % heroContent.length;
+            const content = heroContent[currentContentIndex];
+
+            heroSection.style.backgroundImage = `url('${content.image}')`;
+            right_side_image.src = content.image;
+            heroTitle.innerHTML = content.title;
+            heroDescription.textContent = content.description;
+
+            // Switch to fade-in
+            heroTitle.classList.remove("fade-out");
+            heroDescription.classList.remove("fade-out");
+
+            heroTitle.classList.add("fade-in");
+            heroDescription.classList.add("fade-in");
+        }, 500); // must match CSS transition duration
     }
 
     setInterval(changeHeroContent, 6000);
 </script>
 
+
+
+
+<style>
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+</style>
 </html>
