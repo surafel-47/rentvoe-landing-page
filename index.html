@@ -25,7 +25,19 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/globals.css">
     <link rel="icon" type="image/png" href="/favicon.ico">
+    <style>
+        .fade-out {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        }
+
+        .fade-in {
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+        }
+    </style>
 </head>
+
 
 <body class="bg-white text-gray-900">
     <!-- Navigation -->
@@ -639,50 +651,35 @@
                     </div>
                 </form>
             </div>
+
+                
             <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+            <script src="/js/form-action.js"></script>
             <script>
-                    // Init EmailJS
-                    (function () {
-                        emailjs.init("W1mtGRMCVOPWfCUbr"); //  PUBLIC key
-                    })();
-
-                    document.getElementById("contact-form").addEventListener("submit", function (e) {
+                    document.getElementById("contact-form").addEventListener("submit", async function (e) {
                         e.preventDefault();
-
-                        const serviceID = "service_ee3d1rs";  // your service ID
-                        const templateOwner = "contactUsTemplateOwner";   // make sure you created this template in EmailJS
-                        const templateClient = "send_to_client"; // and this one too
 
                         // Collect form values
                         const formData = {
-                        name: document.getElementById("name").value,
-                        email: document.getElementById("email").value,
-                        phone: document.getElementById("phone").value,
-                        service_interest: document.getElementById("service_interest").value,
-                        message: document.getElementById("message").value,
-                        };
+                            name: document.getElementById("name").value,
+                            email: document.getElementById("email").value,
+                            phone: document.getElementById("phone").value,
+                            service_interest: document.getElementById("service_interest").value,
+                            message: document.getElementById("message").value,
+                        }; 
 
-                        console.log("Form Data:", formData);
-                        // 1. Send email to YOU (site owner)
-                        emailjs.send(serviceID, templateOwner, formData)
-                        .then(() => {
-                            console.log("✅ Email sent to owner");
-                        })
-                        .catch((err) => {
-                            console.error("❌ Error sending to owner:", err);
-                        });
 
-                        // 2. Auto-reply to the client
-                        // emailjs.send(serviceID, templateClient, formData)
-                        //   .then(() => {
-                        //     console.log("✅ Auto-reply sent to client");
-                        //     alert("Message sent successfully! Check your inbox.");
-                        //     document.getElementById("contact-form").reset(); // clear form
-                        //   })
-                        //   .catch((err) => {
-                        //     console.error("❌ Error sending auto-reply:", err);
-                        //     alert("There was a problem sending your message. Please try again.");
-                        //   });
+
+
+                            try {
+                                showOverlay();
+                                const result = await foo();
+                                hideOverlay();
+                                showMessage(result, "success");
+                            } catch (err) {
+                                hideOverlay();
+                                showMessage(err, "error");
+                            }
                     });
             </script>
 
@@ -822,15 +819,5 @@
 
 
 
-<style>
-.fade-out {
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
 
-.fade-in {
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out;
-}
-</style>
 </html>
