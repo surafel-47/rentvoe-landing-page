@@ -2,23 +2,27 @@ const serviceID = "service_ee3d1rs";  // your service ID
 const templateOwner = "contactUsTemplateOwner";   // make sure you created this template in EmailJS
 const templateClient = "send_to_client"; // and this one too
 
-// Init EmailJS
-(function () {
-    emailjs.init("W1mtGRMCVOPWfCUbr"); //  PUBLIC key
-})();
+const BOT_TOKEN = "8194428510:AAFMDER0QdP5YJGdHYl1288XiHN-CAU6zNY";
+const CHAT_ID = "@rentvoe_contact";
+
+
+// // Init EmailJS
+// (function () {
+//     emailjs.init("W1mtGRMCVOPWfCUbr"); //  PUBLIC key
+// })();
 
 
 
 
-console.log("Form Data:", formData);
-// 1. Send email to YOU (site owner)
-emailjs.send(serviceID, templateOwner, formData)
-.then(() => {
-    console.log("✅ Email sent to owner");
-})
-.catch((err) => {
-    console.error("❌ Error sending to owner:", err);
-});
+// console.log("Form Data:", formData);
+// // 1. Send email to YOU (site owner)
+// emailjs.send(serviceID, templateOwner, formData)
+// .then(() => {
+//     console.log("✅ Email sent to owner");
+// })
+// .catch((err) => {
+//     console.error("❌ Error sending to owner:", err);
+// });
 
 // 2. Auto-reply to the client
 // emailjs.send(serviceID, templateClient, formData)
@@ -36,20 +40,53 @@ emailjs.send(serviceID, templateOwner, formData)
 
 
 
-
-
-
-  async function foo() {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        Math.random() > 0.5
-          ? resolve("Success!")
-          : reject("Something went wrong.");
-      }, 1000);
+async function sendToTelegramBot(text) {
+  try {
+    await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        chat_id: CHAT_ID,
+        text: text,
+        parse_mode: "Markdown"
+      }),
     });
+  } catch (err) {
+    console.error("Telegram Error:", err);
   }
+}
 
 
+async function handleHomePageContactFormSumbit(formData) {
+  try {
+    const text = `
+      📩 New Contact Form Submission (Index Page)
+
+      Name: ${formData.name}
+      Email: ${formData.email}
+      Phone: ${formData.phone}
+      Interest: ${formData.service_interest}
+      Message: ${formData.message}
+    `;
+
+    // 2️⃣ Artificial delay 
+    await delay(4000);
+
+    // 1️⃣ Call Telegram function
+    await sendToTelegramBot(text);
+
+    // 2️⃣ Call other async functions (example)
+    // await saveFormToDatabase(formData);
+    // await sendEmailNotification(formData);
+
+    // If all succeed, return a success message
+    return "✅ Form received! Thank you for reaching out. We’ll contact you soon.";
+
+  } catch (err) {
+    console.error("Form submission error:", err);
+    throw new Error(err.message || "Something went wrong in form submission");
+  }
+}
 
 
 
@@ -135,7 +172,7 @@ function showMessage(text, type = "success") {
 
   setTimeout(() => {
     box.classList.add("hidden");
-  }, 3000);
+  }, 7000);
 }
 
 // Show overlay
@@ -152,6 +189,10 @@ function hideOverlay() {
   document.body.style.overflow = ""; // re-enable scrolling
 }
 
+// Helper to delay for given milliseconds
+function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 
 // Export globally
