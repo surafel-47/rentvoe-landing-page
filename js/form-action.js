@@ -39,20 +39,34 @@ const CHAT_ID = "@rentvoe_contact";
 
 
 
-
-async function sendToTelegramBot(text) {
+async function sendToTelegramBot(text, file = null) {
   try {
-    await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        chat_id: CHAT_ID,
-        text: text,
-        parse_mode: "Markdown"
-      }),
-    });
+    if (file) {
+      // Send file using sendDocument
+      const formData = new FormData();
+      formData.append("chat_id", CHAT_ID);
+      formData.append("caption", text); // optional caption
+      formData.append("document", file);
+
+      await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendDocument`, {
+        method: "POST",
+        body: formData,
+      });
+    } else {
+      // Send plain text
+      await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          chat_id: CHAT_ID,
+          text: text,
+          parse_mode: "Markdown"
+        }),
+      });
+    }
   } catch (err) {
     console.error("Telegram Error:", err);
+    throw new Error("Failed to send message/file to Telegram");
   }
 }
 
@@ -87,6 +101,40 @@ async function handleHomePageContactFormSumbit(formData) {
     throw new Error(err.message || "Something went wrong in form submission");
   }
 }
+
+
+
+
+
+async function handleCareersPageApplicationFormSumbit(formData) {
+  try {
+    const text = `
+    📩 New Job Application (Careers Page)
+
+    Name: ${formData.firstName} ${formData.lastName}
+    Email: ${formData.email}
+    Phone: ${formData.phone}
+    Position: ${formData.position}
+    Experience: ${formData.experience}
+    Cover Letter: ${formData.coverLetter}
+`;
+
+    // Artificial delay
+    await delay(2000);
+
+    // Send message + file (if resume exists)
+    await sendToTelegramBot(text, formData.resume);
+
+    // Optional: other async functions
+    // await sendEmailNotification(formData);
+
+    return "✅ Application received! Thank you for applying. We’ll contact you soon.";
+  } catch (err) {
+    console.error("Careers form submission error:", err);
+    throw new Error(err.message || "Something went wrong during form submission");
+  }
+}
+
 
 
 
