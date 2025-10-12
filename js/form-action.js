@@ -94,7 +94,7 @@ async function handleHomePageContactFormSumbit(formData) {
     // await sendEmailNotification(formData);
 
     // If all succeed, return a success message
-    return "✅ Form received! Thank you for reaching out. We’ll contact you soon.";
+    return " Form received! Thank you for reaching out. We’ll contact you soon.";
 
   } catch (err) {
     console.error("Form submission error:", err);
@@ -128,7 +128,7 @@ async function handleCareersPageApplicationFormSumbit(formData) {
     // Optional: other async functions
     // await sendEmailNotification(formData);
 
-    return "✅ Application received! Thank you for applying. We’ll contact you soon.";
+    return " Application received! Thank you for applying. We’ll contact you soon.";
   } catch (err) {
     console.error("Careers form submission error:", err);
     throw new Error(err.message || "Something went wrong during form submission");
