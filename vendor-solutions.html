@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vendor Solutions - Rentvoe Property Management</title>
-    <meta name="description" content="Comprehensive vendor management and coordination services. Pre-vetted contractors, project management, and quality control for all your property needs.">
-    
+    <meta name="description"
+        content="Comprehensive vendor management and coordination services. Pre-vetted contractors, project management, and quality control for all your property needs.">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/globals.css">
     <link rel="icon" type="image/png" href="/favicon.ico">
 
 </head>
+
 <body class="bg-white text-gray-900">
     <!-- Navigation -->
-     <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-[#271033]/95 backdrop-blur-sm shadow-sm navbar-visible">
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-[#271033]/95 backdrop-blur-sm shadow-sm navbar-visible">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
@@ -34,31 +39,38 @@
                         <img src="/assets/logo.png" alt="Rentvoe Logo" class="h-20 w-auto mr-2">
                     </a>
                 </div>
-                
+
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="/index.html#home" class="text-white hover:text-accent transition-colors">Home</a>
                     <div class="relative group">
-                        <a href="/index.html#services" class="text-white hover:text-accent transition-colors flex items-center">
+                        <a href="/index.html#services"
+                            class="text-white hover:text-accent transition-colors flex items-center">
                             Services <i class="fas fa-chevron-down ml-1 text-xs"></i>
                         </a>
-                        <div class="absolute top-full left-0 mt-2 w-56 bg-[#271033] rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                            <a href="/staffing.html" class="block px-4 py-3 text-white hover:bg-gray-700 hover:text-accent transition-colors">
+                        <div
+                            class="absolute top-full left-0 mt-2 w-56 bg-[#271033] rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                            <a href="/staffing.html"
+                                class="block px-4 py-3 text-white hover:bg-gray-700 hover:text-accent transition-colors">
                                 <i class="fas fa-users mr-2 text-accent"></i>Staffing Solutions
                             </a>
-                            <a href="/vendor-solutions.html" class="block px-4 py-3 text-white hover:bg-gray-700 hover:text-accent transition-colors">
+                            <a href="/vendor-solutions.html"
+                                class="block px-4 py-3 text-white hover:bg-gray-700 hover:text-accent transition-colors">
                                 <i class="fas fa-handshake mr-2 text-success"></i>Vendor Solutions
                             </a>
-                            <a href="/property-management.html" class="block px-4 py-3 text-white hover:bg-gray-700 hover:text-accent transition-colors">
+                            <a href="/property-management.html"
+                                class="block px-4 py-3 text-white hover:bg-gray-700 hover:text-accent transition-colors">
                                 <i class="fas fa-building mr-2 text-warning"></i>Property Management
                             </a>
                         </div>
                     </div>
                     <a href="/careers.html" class="text-white hover:text-accent transition-colors">Careers</a>
                     <a href="/about.html" class="text-white hover:text-accent transition-colors">About</a>
-                    <a href="/index.html#contact" class="bg-white text-[#271033] px-6 py-2 rounded-lg hover:bg-accent/80 transition-all">Contact Us</a>
+                    <a href="/index.html#contact"
+                        class="bg-white text-[#271033] px-6 py-2 rounded-lg hover:bg-accent/80 transition-all">Contact
+                        Us</a>
                 </div>
-                
+
                 <!-- Mobile menu button -->
                 <div class="md:hidden">
                     <button id="mobile-menu-btn" class="text-white hover:text-accent">
@@ -67,40 +79,45 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Mobile Navigation -->
         <div id="mobile-menu" class="hidden md:hidden bg-[#271033] border-t border-gray-700">
             <div class="px-4 py-2 space-y-2">
                 <a href="/index.html#home" class="block py-2 text-white hover:text-accent">Home</a>
                 <a href="/index.html#services" class="block py-2 text-white hover:text-accent">Services</a>
-                <a href="/staffing.html" class="block py-2 pl-4 text-gray-300 hover:text-accent"> <i class="fas fa-users mr-2 text-white"></i> Staffing Solutions</a>
-                <a href="/vendor-solutions.html" class="block py-2 pl-4 text-gray-300 hover:text-accent">  <i class="fas fa-handshake mr-2 text-white"></i> Vendor Solutions</a>
-                <a href="/property-management.html" class="block py-2 pl-4 text-gray-300 hover:text-accent">  <i class="fas fa-building mr-2 text-white"></i> Property Management</a>
+                <a href="/staffing.html" class="block py-2 pl-4 text-gray-300 hover:text-accent"> <i
+                        class="fas fa-users mr-2 text-white"></i> Staffing Solutions</a>
+                <a href="/vendor-solutions.html" class="block py-2 pl-4 text-gray-300 hover:text-accent"> <i
+                        class="fas fa-handshake mr-2 text-white"></i> Vendor Solutions</a>
+                <a href="/property-management.html" class="block py-2 pl-4 text-gray-300 hover:text-accent"> <i
+                        class="fas fa-building mr-2 text-white"></i> Property Management</a>
                 <a href="/about.html" class="block py-2 text-white hover:text-accent">About</a>
-<a href="/careers.html#about" class="block py-2 text-white hover:text-accent">Careers</a>
+                <a href="/careers.html#about" class="block py-2 text-white hover:text-accent">Careers</a>
                 <a href="/index.html#contact" class="block py-2 text-white font-semibold">Contact Us</a>
             </div>
         </div>
     </nav>
-    
+
 
     <!-- Hero Section -->
-    <section class="pt-24 pb-16 bg-primary">
+    <section class="pt-24 pb-16  bg-primary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center" data-aos="fade-up">
                 <h1 class="font-heading font-bold text-5xl lg:text-6xl text-white mb-6">
                     Vendor Solutions & Management
                 </h1>
                 <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">
-                    Streamline your vendor relationships with our comprehensive management services. 
+                    Streamline your vendor relationships with our comprehensive management services.
                     From pre-vetted contractors to project coordination and quality control.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#request-vendors" class="bg-success text-white px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all">
+                    <a href="#vendor-request-form"
+                        class="bg-success text-white px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all">
                         <i class="fas fa-handshake mr-2"></i>
                         Request Vendors
                     </a>
-                    <a href="#vendor-network" class="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all">
+                    <a href="#footer"
+                        class="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all">
                         <i class="fas fa-network-wired mr-2"></i>
                         Join Our Network
                     </a>
@@ -109,312 +126,182 @@
         </div>
     </section>
 
-    <!-- Service Overview -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="font-heading font-bold text-4xl text-primary mb-6">
-                    Complete Vendor Management
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    We handle every aspect of vendor coordination so you can focus on your core business
-                </p>
-            </div>
-            
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div data-aos="fade-right">
-                    <img src="/placeholder.svg?height=600&width=800" 
-                         alt="Professional contractors working on property" 
-                         class="rounded-2xl shadow-lg">
+
+    <!-- Vender Area Title  -->
+    <div class="text-center mb-16 mt-32" data-aos="fade-up">
+        <h2 class="font-heading font-bold text-4xl text-primary mb-6">
+            Our Vendor Network
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Pre-vetted professionals across all property management disciplines
+        </p>
+    </div>
+
+    <!-- Vender Cards Section -->
+    <div class="vendor-cards-section p-10">
+        <!-- Inserted via JS here -->
+    </div>
+    <script src="js/vendor-lists.js"></script>
+    <div class="w-full bg-gradient-to-t from-gray-200 to-gray-50">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+                <div class="text-center mb-10">
+                    <h1 class="text-4xl font-bold text-primary mb-3">Request Vendor Services</h1>
+                    <p class="text-gray-600 text-lg">Fill out the form below and we'll connect you with the right
+                        vendors
+                        for your property needs.</p>
                 </div>
-                
-                <div data-aos="fade-left">
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="w-12 h-12 bg-success/10 rounded-lg flex items-center justify-center mr-4 mt-1">
-                                <i class="fas fa-search text-success text-xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-semibold text-xl text-primary mb-2">Vendor Sourcing & Vetting</h3>
-                                <p class="text-gray-600">We identify, evaluate, and onboard qualified contractors and service providers, ensuring they meet our strict standards for quality, reliability, and professionalism.</p>
-                            </div>
+
+                <form id="vendor-request-form" class="space-y-6">
+                    <!-- Full Name and Property Name -->
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="full_name" class="block text-sm font-semibold text-gray-700 mb-2">
+                                <i class="fas fa-user mr-1 text-gray-500"></i>
+                                Full Name <span class="text-red-500">*</span>
+                            </label>
+                            <input type="text" id="full_name" name="full_name" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
+                                placeholder="Your Full name">
                         </div>
-                        
-                        <div class="flex items-start">
-                            <div class="w-12 h-12 bg-info/10 rounded-lg flex items-center justify-center mr-4 mt-1">
-                                <i class="fas fa-project-diagram text-info text-xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-semibold text-xl text-primary mb-2">Project Coordination</h3>
-                                <p class="text-gray-600">End-to-end project management from initial planning to completion, including scheduling, progress monitoring, and stakeholder communication.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="w-12 h-12 bg-warning/10 rounded-lg flex items-center justify-center mr-4 mt-1">
-                                <i class="fas fa-clipboard-check text-warning text-xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-semibold text-xl text-primary mb-2">Quality Assurance</h3>
-                                <p class="text-gray-600">Comprehensive inspection and quality control processes to ensure all work meets specifications and industry standards before project completion.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mr-4 mt-1">
-                                <i class="fas fa-dollar-sign text-accent text-xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-semibold text-xl text-primary mb-2">Cost Management</h3>
-                                <p class="text-gray-600">Competitive bidding processes, budget optimization, and cost control measures to maximize value while maintaining quality standards.</p>
-                            </div>
+                        <div>
+                            <label for="property_name" class="block text-sm font-semibold text-gray-700 mb-2">
+                                <i class="fas fa-building mr-1 text-gray-500"></i>
+                                Property Name
+                            </label>
+                            <input type="text" id="property_name" name="property_name"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
+                                placeholder="e.g. Sunset Apartments">
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Vendor Categories -->
-    <section class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="font-heading font-bold text-4xl text-primary mb-6">
-                    Our Vendor Network
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Pre-vetted professionals across all property management disciplines
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Maintenance & Repairs -->
-                <div class="service-card bg-white rounded-xl p-6 shadow-lg border border-gray-100" data-aos="fade-up" data-aos-delay="100">
-                    <div class="text-center mb-4">
-                        <div class="w-16 h-16 bg-success/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-tools text-success text-2xl"></i>
-                        </div>
-                        <h3 class="font-semibold text-xl text-primary mb-3">Maintenance & Repairs</h3>
-                    </div>
-                    <ul class="space-y-2 text-gray-600 text-sm">
-                        <li><i class="fas fa-check text-success mr-2"></i>HVAC specialists</li>
-                        <li><i class="fas fa-check text-success mr-2"></i>Plumbing contractors</li>
-                        <li><i class="fas fa-check text-success mr-2"></i>Electrical technicians</li>
-                        <li><i class="fas fa-check text-success mr-2"></i>Appliance repair services</li>
-                        <li><i class="fas fa-check text-success mr-2"></i>General maintenance crews</li>
-                    </ul>
-                </div>
-
-                <!-- Construction & Renovation -->
-                <div class="service-card bg-white rounded-xl p-6 shadow-lg border border-gray-100" data-aos="fade-up" data-aos-delay="200">
-                    <div class="text-center mb-4">
-                        <div class="w-16 h-16 bg-warning/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-hammer text-warning text-2xl"></i>
-                        </div>
-                        <h3 class="font-semibold text-xl text-primary mb-3">Construction & Renovation</h3>
-                    </div>
-                    <ul class="space-y-2 text-gray-600 text-sm">
-                        <li><i class="fas fa-check text-success mr-2"></i>General contractors</li>
-                        <li><i class="fas fa-check text-success mr-2"></i>Flooring specialists</li>
-                        <li><i class="fas fa-check text-success mr-2"></i>Painting contractors</li>
-                        <li><i class="fas fa-check text-success mr-2"></i>Kitchen & bath remodeling</li>
-                        <li><i class="fas fa-check text-success mr-2"></i>Roofing professionals</li>
-                    </ul>
-                </div>
-
-                <!-- Landscaping & Exterior -->
-                <div class="service-card bg-white rounded-xl p-6 shadow-lg border border-gray-100" data-aos="fade-up" data-aos-delay="300">
-                    <div class="text-center mb-4">
-                        <div class="w-16 h-16 bg-info/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-leaf text-info text-2xl"></i>
-                        </div>
-                        <h3 class="font-semibold text-xl text-primary mb-3">Landscaping & Exterior</h3>
-                    </div>
-                    <ul class="space-y-2 text-gray-600 text-sm">
-                        <li><i class="fas fa-check text-success mr-2"></i>Landscape maintenance</li>
-                        <li><i class="fas fa-check text-success mr-2"></i>Snow removal services</li>
-                        <li><i class="fas fa-check text-success mr-2"></i>Pressure washing</li>
-                        <li><i class="fas fa-check text-success mr-2"></i>Exterior cleaning</li>
-                        <li><i class="fas fa-check text-success mr-2"></i>Parking lot maintenance</li>
-                    </ul>
-                </div>
-
-                <!-- Cleaning & Janitorial -->
-                <div class="service-card bg-white rounded-xl p-6 shadow-lg border border-gray-100" data-aos="fade-up" data-aos-delay="400">
-                    <div class="text-center mb-4">
-                        <div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-broom text-accent text-2xl"></i>
-                        </div>
-                        <h3 class="font-semibold text-xl text-primary mb-3">Cleaning & Janitorial</h3>
-                    </div>
-                    <ul class="space-y-2 text-gray-600 text-sm">
-                        <li><i class="fas fa-check text-success mr-2"></i>Move-out cleaning</li>
-                        <li><i class="fas fa-check text-success mr-2"></i>Deep cleaning services</li>
-                        <li><i class="fas fa-check text-success mr-2"></i>Carpet cleaning</li>
-                        <li><i class="fas fa-check text-success mr-2"></i>Window cleaning</li>
-                        <li><i class="fas fa-check text-success mr-2"></i>Common area maintenance</li>
-                    </ul>
-                </div>
-
-                <!-- Security & Technology -->
-                <div class="service-card bg-white rounded-xl p-6 shadow-lg border border-gray-100" data-aos="fade-up" data-aos-delay="500">
-                    <div class="text-center mb-4">
-                        <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-shield-alt text-primary text-2xl"></i>
-                        </div>
-                        <h3 class="font-semibold text-xl text-primary mb-3">Security & Technology</h3>
-                    </div>
-                    <ul class="space-y-2 text-gray-600 text-sm">
-                        <li><i class="fas fa-check text-success mr-2"></i>Security system installation</li>
-                        <li><i class="fas fa-check text-success mr-2"></i>Access control systems</li>
-                        <li><i class="fas fa-check text-success mr-2"></i>Camera surveillance</li>
-                        <li><i class="fas fa-check text-success mr-2"></i>Internet & cable services</li>
-                        <li><i class="fas fa-check text-success mr-2"></i>Smart home technology</li>
-                    </ul>
-                </div>
-
-                <!-- Specialty Services -->
-                <div class="service-card bg-white rounded-xl p-6 shadow-lg border border-gray-100" data-aos="fade-up" data-aos-delay="600">
-                    <div class="text-center mb-4">
-                        <div class="w-16 h-16 bg-success/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-cogs text-success text-2xl"></i>
-                        </div>
-                        <h3 class="font-semibold text-xl text-primary mb-3">Specialty Services</h3>
-                    </div>
-                    <ul class="space-y-2 text-gray-600 text-sm">
-                        <li><i class="fas fa-check text-success mr-2"></i>Pest control services</li>
-                        <li><i class="fas fa-check text-success mr-2"></i>Fire safety inspections</li>
-                        <li><i class="fas fa-check text-success mr-2"></i>Environmental testing</li>
-                        <li><i class="fas fa-check text-success mr-2"></i>Locksmith services</li>
-                        <li><i class="fas fa-check text-success mr-2"></i>Emergency restoration</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Process Section -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="font-heading font-bold text-4xl text-primary mb-6">
-                    Our Vendor Management Process
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Streamlined workflow designed for efficiency and quality results
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-16 h-16 bg-success text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">1</div>
-                    <h3 class="font-semibold text-lg text-primary mb-3">Request & Assessment</h3>
-                    <p class="text-gray-600 text-sm">Submit your project requirements and we'll assess scope, timeline, and budget needs.</p>
-                </div>
-                
-                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-16 h-16 bg-info text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">2</div>
-                    <h3 class="font-semibold text-lg text-primary mb-3">Vendor Selection</h3>
-                    <p class="text-gray-600 text-sm">We match your project with pre-vetted vendors from our network and obtain competitive bids.</p>
-                </div>
-                
-                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-16 h-16 bg-warning text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">3</div>
-                    <h3 class="font-semibold text-lg text-primary mb-3">Project Execution</h3>
-                    <p class="text-gray-600 text-sm">Coordinate scheduling, monitor progress, and ensure quality standards throughout the project.</p>
-                </div>
-                
-                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
-                    <div class="w-16 h-16 bg-accent text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">4</div>
-                    <h3 class="font-semibold text-lg text-primary mb-3">Quality Control</h3>
-                    <p class="text-gray-600 text-sm">Final inspection, quality verification, and project completion documentation.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Join Network Section -->
-    <section id="vendor-network" class="py-20 bg-gray-50">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12" data-aos="fade-up">
-                <h2 class="font-heading font-bold text-4xl text-primary mb-6">Join Our Vendor Network</h2>
-                <p class="text-xl text-gray-600">Qualified contractors and service providers are invited to apply</p>
-            </div>
-            
-            <div class="bg-white rounded-2xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="200">
-                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <!-- Address -->
                     <div>
-                        <h3 class="font-semibold text-xl text-primary mb-4">Benefits of Joining</h3>
-                        <div class="space-y-3">
-                            <div class="flex items-start">
-                                <i class="fas fa-check text-success mt-1 mr-3"></i>
-                                <span class="text-gray-700">Consistent project opportunities</span>
-                            </div>
-                            <div class="flex items-start">
-                                <i class="fas fa-check text-success mt-1 mr-3"></i>
-                                <span class="text-gray-700">Prompt payment terms</span>
-                            </div>
-                            <div class="flex items-start">
-                                <i class="fas fa-check text-success mt-1 mr-3"></i>
-                                <span class="text-gray-700">Professional development support</span>
-                            </div>
-                            <div class="flex items-start">
-                                <i class="fas fa-check text-success mt-1 mr-3"></i>
-                                <span class="text-gray-700">Access to premium properties</span>
-                            </div>
-                            <div class="flex items-start">
-                                <i class="fas fa-check text-success mt-1 mr-3"></i>
-                                <span class="text-gray-700">Long-term partnership opportunities</span>
-                            </div>
+                        <label for="address" class="block text-sm font-semibold text-gray-700 mb-2">
+                            <i class="fas fa-map-marker-alt mr-1 text-gray-500"></i>
+                            Property Address <span class="text-red-500">*</span>
+                        </label>
+                        <input type="text" id="address" name="address" required
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
+                            placeholder="123 Main Street, City, State, ZIP">
+                    </div>
+
+                    <!-- Contact Email and Phone -->
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="contact_email" class="block text-sm font-semibold text-gray-700 mb-2">
+                                <i class="fas fa-envelope mr-1 text-gray-500"></i>
+                                Contact Email <span class="text-red-500">*</span>
+                            </label>
+                            <input type="email" id="contact_email" name="contact_email" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
+                                placeholder="Your Email Address">
+                        </div>
+                        <div>
+                            <label for="contact_phone" class="block text-sm font-semibold text-gray-700 mb-2">
+                                <i class="fas fa-phone mr-1 text-gray-500"></i>
+                                Contact Phone Number <span class="text-red-500">*</span>
+                            </label>
+                            <input type="tel" id="contact_phone" name="contact_phone" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
+                                placeholder="e.g. (+1) 234....">
                         </div>
                     </div>
-                    
+
+                    <!-- Vendors Needed (Multiple Select Checkboxes) -->
                     <div>
-                        <h3 class="font-semibold text-xl text-primary mb-4">Requirements</h3>
-                        <div class="space-y-3">
-                            <div class="flex items-start">
-                                <i class="fas fa-check text-info mt-1 mr-3"></i>
-                                <span class="text-gray-700">Valid business license and insurance</span>
-                            </div>
-                            <div class="flex items-start">
-                                <i class="fas fa-check text-info mt-1 mr-3"></i>
-                                <span class="text-gray-700">Proven track record and references</span>
-                            </div>
-                            <div class="flex items-start">
-                                <i class="fas fa-check text-info mt-1 mr-3"></i>
-                                <span class="text-gray-700">Professional certifications (where applicable)</span>
-                            </div>
-                            <div class="flex items-start">
-                                <i class="fas fa-check text-info mt-1 mr-3"></i>
-                                <span class="text-gray-700">Quality workmanship standards</span>
-                            </div>
-                            <div class="flex items-start">
-                                <i class="fas fa-check text-info mt-1 mr-3"></i>
-                                <span class="text-gray-700">Reliable communication and scheduling</span>
+                        <label class="block text-sm font-semibold text-gray-700 mb-3">
+                            <i class="fas fa-concierge-bell mr-1 text-gray-500"></i>
+                            Vendors Services Needed
+                        </label>
+                        <div class="border border-gray-300 rounded-lg p-4 bg-gray-50 max-h-64 overflow-y-auto">
+                            <div class="vendor-service-list-form-input grid md:grid-cols-2 gap-3">
+                                <!-- Vendor services inserted via JS -->
                             </div>
                         </div>
+                        <p class="text-xs text-gray-500 mt-2">Select vendor services you need for your property</p>
                     </div>
-                </div>
-                
-                <div class="text-center">
-                    <a href="index.html#contact" class="bg-info text-white px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all inline-block">
-                        <i class="fas fa-handshake mr-2"></i>
-                        Apply to Join Network
-                    </a>
-                </div>
+
+                    <!-- Booking Date -->
+                    <div>
+                        <label for="booking_date" class="block text-sm font-semibold text-gray-700 mb-2">
+                            <i class="fas fa-calendar-alt mr-1 text-gray-500"></i>
+                            Preferred Service Date
+                        </label>
+                        <input type="date" id="booking_date" name="booking_date"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all">
+                        <p class="text-xs text-gray-500 mt-2">Select when you'd like the vendor services to begin</p>
+                    </div>
+
+                    <!-- Additional Notes (Optional) -->
+                    <div>
+                        <label for="additional_notes" class="block text-sm font-semibold text-gray-700 mb-2">
+                            <i class="fas fa-sticky-note mr-1 text-gray-500"></i>
+                            Additional Notes
+                        </label>
+                        <textarea id="additional_notes" name="additional_notes" rows="4"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
+                            placeholder="Any specific requirements or details we should know about..."></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="text-center pt-4">
+                        <button type="submit"
+                            class="bg-primary text-white px-10 py-4 rounded-lg font-semibold hover:bg-primary-light transition-all transform hover:scale-105 shadow-lg">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Submit Request
+                        </button>
+                    </div>
+                </form>
+
+                <script>
+                    document.getElementById('vendor-request-form').addEventListener('submit', async function (e) {
+                        e.preventDefault();
+
+                        // Collect form values
+                        const formData = {
+                            full_name: document.getElementById("full_name").value,
+                            property_name: document.getElementById("property_name").value,
+                            address: document.getElementById("address").value,
+                            contact_email: document.getElementById("contact_email").value,
+                            contact_phone: document.getElementById("contact_phone").value,
+                            booking_date: document.getElementById("booking_date").value,
+                            additional_notes: document.getElementById("additional_notes").value,
+                            vendors_needed: Array.from(document.querySelectorAll(".vendor-service-list-form-input input[type='checkbox']:checked"))
+                                .map(cb => cb.value)
+                        };
+
+
+                        try {
+                            showOverlay();
+                            const result = await handleVendorRequestFormSubmit(formData);
+                            hideOverlay();
+                            showMessage(result, "success");
+                            document.getElementById("vendor-request-form").reset();
+                        } catch (err) {
+                            hideOverlay();
+                            showMessage('Something Went Wrong, Try Again!', "error");
+                        }
+                    });
+
+                    // Set minimum date to today
+                    const today = new Date().toISOString().split('T')[0];
+                    document.getElementById('booking_date').setAttribute('min', today);
+                </script>
+                <script src="/js/form-action.js"></script>
             </div>
         </div>
-    </section>
+
+    </div>
 
     <!-- Footer -->
-    <footer class=" bg-primary text-white py-16">
+    <footer id="footer" class=" bg-primary text-white py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
-                 <div class="font-heading font-bold text-2xl mb-4">
-                    <img src="/assets/logo.png" alt="Rentvoe Logo" class="h-20 w-auto">
-                </div>
+                    <div class="font-heading font-bold text-2xl mb-4">
+                        <img src="/assets/logo.png" alt="Rentvoe Logo" class="h-20 w-auto">
+                    </div>
                     <p class="text-gray-300 mb-4">
                         Complete property management solutions for modern real estate operations.
                     </p>
@@ -430,27 +317,31 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <div>
                     <h3 class="font-heading font-semibold text-lg mb-4">Services</h3>
                     <ul class="space-y-2 text-gray-300">
-                        <li><a href="staffing.html" class="hover:text-accent transition-colors">Staffing Solutions</a></li>
-                        <li><a href="vendor-solutions.html" class="hover:text-accent transition-colors">Vendor Solutions</a></li>
-                        <li><a href="property-management.html" class="hover:text-accent transition-colors">Property Management</a></li>
+                        <li><a href="staffing.html" class="hover:text-accent transition-colors">Staffing Solutions</a>
+                        </li>
+                        <li><a href="vendor-solutions.html" class="hover:text-accent transition-colors">Vendor
+                                Solutions</a></li>
+                        <li><a href="property-management.html" class="hover:text-accent transition-colors">Property
+                                Management</a></li>
                         <li><a href="#contact" class="hover:text-accent transition-colors">Consultation</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h3 class="font-heading font-semibold text-lg mb-4">Quick Links</h3>
                     <ul class="space-y-2 text-gray-300">
                         <li><a href="/about.html" class="hover:text-accent transition-colors">About Us</a></li>
-                        <li><a href="staffing.html#apply" class="hover:text-accent transition-colors">Join Our Team</a></li>
+                        <li><a href="staffing.html#apply" class="hover:text-accent transition-colors">Join Our Team</a>
+                        </li>
                         <li><a href="#contact" class="hover:text-accent transition-colors">Contact</a></li>
                         <li><a href="#" class="hover:text-accent transition-colors">Privacy Policy</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h3 class="font-heading font-semibold text-lg mb-4">Contact Info</h3>
                     <div class="space-y-2 text-gray-300">
@@ -461,7 +352,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="border-t border-gray-600 mt-12 pt-8 text-center text-gray-300">
                 <p>&copy; 2025 Rentvoe. All rights reserved. | Complete Property Management Solutions</p>
             </div>
@@ -470,7 +361,8 @@
 
 </body>
 
-    <!-- Script s -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="js/script.js"></script>
+<!-- Script s -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/script.js"></script>
+
 </html>
