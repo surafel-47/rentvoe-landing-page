@@ -94,7 +94,7 @@ async function handleHomePageContactFormSumbit(formData) {
     // await sendEmailNotification(formData);
 
     // If all succeed, return a success message
-    return "✅ Form received! Thank you for reaching out. We’ll contact you soon.";
+    return " Form received! Thank you for reaching out. We’ll contact you soon.";
 
   } catch (err) {
     console.error("Form submission error:", err);
@@ -128,13 +128,49 @@ async function handleCareersPageApplicationFormSumbit(formData) {
     // Optional: other async functions
     // await sendEmailNotification(formData);
 
-    return "✅ Application received! Thank you for applying. We’ll contact you soon.";
+    return " Application received! Thank you for applying. We’ll contact you soon.";
   } catch (err) {
     console.error("Careers form submission error:", err);
     throw new Error(err.message || "Something went wrong during form submission");
   }
 }
 
+
+async function handleVendorRequestFormSubmit(formData) {
+  try {
+    // Build a nice formatted message
+    const text = `
+      📩 New Vendor Request Form Submission
+
+       Full Name: ${formData.full_name}
+       Property Name: ${formData.property_name || "N/A"}
+       Address: ${formData.address}
+       Email: ${formData.contact_email}
+       Phone: ${formData.contact_phone}
+       Preferred Service Date: ${formData.booking_date}
+       Vendor Services Needed: ${formData.vendors_needed.length ? formData.vendors_needed.join(", ") : "None"}
+       \n
+      📝 Additional Remarks Written: ${formData.additional_notes || "N/A"}
+    `;
+
+    // 2️⃣ Artificial delay for UX (optional)
+    await delay(2000);
+
+    // 1️⃣ Call Telegram function (replace with your actual implementation)
+    await sendToTelegramBot(text);
+
+    // 2️⃣ Call other async functions if needed
+    // await saveFormToDatabase(formData);
+    // await sendEmailNotification(formData);
+
+    // Return success message
+    return "Vendor request submitted! Thank you, we’ll contact you soon.";
+
+  } catch (err) {
+    console.error("Vendor form submission error:", err);
+    throw new Error(err.message || "Something went wrong during vendor request submission");
+  }
+}
 
 
 
