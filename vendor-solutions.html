@@ -208,18 +208,32 @@
                         </div>
                     </div>
 
-                    <!-- Vendors Needed (Multiple Select Checkboxes) -->
+                    <!-- Service Name Dropdown and Dynamic Categories -->
                     <div>
-                        <label class="block text-sm font-semibold text-gray-700 mb-3">
+                        <label for="service_name" class="block text-sm font-semibold text-gray-700 mb-2">
                             <i class="fas fa-concierge-bell mr-1 text-gray-500"></i>
-                            Vendors Services Needed
+                            Service Name <span class="text-red-500">*</span>
                         </label>
-                        <div class="border border-gray-300 rounded-lg p-4 bg-gray-50 max-h-64 overflow-y-auto">
-                            <div class="vendor-service-list-form-input grid md:grid-cols-2 gap-3">
-                                <!-- Vendor services inserted via JS -->
+                        <select id="service_name" name="service_name" required
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all">
+                            <option value="">-- Select a Service --</option>
+                            <!-- Options inserted via JS -->
+                        </select>
+                    </div>
+
+                    <!-- Dynamic Categories Checkboxes -->
+                    <div id="categories-container"
+                        class="hidden border border-gray-300 rounded-lg p-4 bg-gray-50 transition-all">
+                        <label class="block text-sm font-semibold text-gray-700 mb-3">
+                            <i class="fas fa-list mr-1 text-gray-500"></i>
+                            Categories <span class="text-red-500">*</span>
+                        </label>
+                        <div class="max-h-64 overflow-y-auto">
+                            <div class="vendor-categories-list grid md:grid-cols-2 gap-3">
+                                <!-- Categories inserted via JS -->
                             </div>
                         </div>
-                        <p class="text-xs text-gray-500 mt-2">Select vendor services you need for your property</p>
+                        <p class="text-xs text-gray-500 mt-2">Select one or more categories for your service request</p>
                     </div>
 
                     <!-- Booking Date -->
@@ -254,9 +268,31 @@
                     </div>
                 </form>
 
+                <style>
+                    /* Add glow animation styles */
+                    @keyframes glow-pulse {
+
+                        0%,
+                        100% {
+                            box-shadow: 0 0 5px rgba(22, 156, 100, 0.3), inset 0 0 5px rgba(22, 156, 100, 0.1);
+                        }
+
+                        50% {
+                            box-shadow: 0 0 20px rgba(22, 156, 100, 0.8), inset 0 0 10px rgba(22, 156, 100, 0.3);
+                        }
+                    }
+
+                    .glow-effect {
+                        animation: glow-pulse 0.6s ease-in-out 5 !important;
+                    }
+                </style>
+
                 <script>
                     document.getElementById('vendor-request-form').addEventListener('submit', async function (e) {
                         e.preventDefault();
+
+                        const selectedCategories = Array.from(document.querySelectorAll(".vendor-categories-list input[type='checkbox']:checked"))
+                            .map(cb => cb.value);
 
                         // Collect form values
                         const formData = {
@@ -265,12 +301,11 @@
                             address: document.getElementById("address").value,
                             contact_email: document.getElementById("contact_email").value,
                             contact_phone: document.getElementById("contact_phone").value,
+                            service_name: document.getElementById("service_name").value,
+                            categories: selectedCategories,
                             booking_date: document.getElementById("booking_date").value,
-                            additional_notes: document.getElementById("additional_notes").value,
-                            vendors_needed: Array.from(document.querySelectorAll(".vendor-service-list-form-input input[type='checkbox']:checked"))
-                                .map(cb => cb.value)
+                            additional_notes: document.getElementById("additional_notes").value
                         };
-
 
                         try {
                             showOverlay();
